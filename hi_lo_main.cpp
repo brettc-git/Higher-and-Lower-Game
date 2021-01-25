@@ -1,3 +1,9 @@
+/****************************************************
+
+Difficulty dependent on User Input
+
+****************************************************/
+
 #include <iostream>
 #include <vector>
 #include "card_deck.h"
@@ -85,10 +91,11 @@ int main()
 
 	do {
 
-	cout << "How many cards would you like to deal? (Note: Minimum is 2 while Maximum is 52)" << endl;
+	cout << "How many cards would you like to deal?" << endl;
+	cout << "(Note: Minimum is 2 cards while Maximum is 52 cards, game will not begin until amount within range is input)" << endl;
 	cin >> amount;
 
-	} while (amount > 52);
+	} while (amount > 52 && amount < 2);
 
 	vector<Card> set1(amount);  // 1 Card will be used as a start up
 
@@ -97,58 +104,6 @@ int main()
 	cout << "Easy Mode: ";
 	cout << "\n";
 	HigherLowerGame(set1, gameOver);
-
-	
-
-	///********************
-	//Game 2: 15 Cards
-
-	//Normal Mode
-	//********************/
-
-	//game_.shuffleDeck();
-
-	//vector<Card> set2(16);
-
-	//set2 = game_.dealCards(set2);
-
-	//cout << "Normal Mode: ";
-	//cout << "\n";
-	//HigherLowerGame(set2, gameOver);
-
-
-	///********************
-	//Game 3: 26 Cards
-
-	//Hard Mode
-	//********************/
-
-	//game_.shuffleDeck();
-
-	//vector<Card> set3(27);
-
-	//set3 = game_.dealCards(set3);
-
-	//cout << "Hard Mode: ";
-	//cout << "\n";
-	//HigherLowerGame(set3, gameOver);
-
-
-	///********************
-	//Game 3: 39 Cards
-
-	//Insane Mode
-	//********************/
-
-	//game_.shuffleDeck();
-
-	//vector<Card> set4(40); 
-
-	//set4 = game_.dealCards(set4);
-
-	//cout << "Insane Mode: ";
-	//cout << "\n";
-	//HigherLowerGame(set4, gameOver);
 
 	return 0;
 }
