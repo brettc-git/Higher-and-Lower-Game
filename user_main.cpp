@@ -92,12 +92,12 @@ int main()
 
 	} while (amount > 52 && amount < 2);
 
-	vector<Card> set1(amount);  // 1 Card will be used as a start up
+	vector<Card> set(amount); 
 
-	set1 = game_.dealCards(set1);
+	set1 = game_.dealCards(set);
 
 	cout << "\n";
-	HigherLowerGame(set1, gameOver);
+	HigherLowerGame(set, gameOver);
 
 	return 0;
 }
