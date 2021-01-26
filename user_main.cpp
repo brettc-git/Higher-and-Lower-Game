@@ -82,11 +82,6 @@ int main()
 	card_deck game_;
 	int amount;
 
-	/********************
-	Game 1: 7 Cards
-
-	Easy Mode
-	********************/
 	game_.shuffleDeck();
 
 	do {
@@ -101,7 +96,6 @@ int main()
 
 	set1 = game_.dealCards(set1);
 
-	cout << "Easy Mode: ";
 	cout << "\n";
 	HigherLowerGame(set1, gameOver);
 
