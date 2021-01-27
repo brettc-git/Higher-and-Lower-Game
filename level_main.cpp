@@ -81,7 +81,7 @@ int main()
 	int amount_keys[4] = { 7, 15, 26, 39 };
 	string difficulty_keys[4] = { "Easy", "Medium", "Hard", "Insane" };
 
-	for (int i = 0; i < 4 && gameOver != true; i++) { 
+	for (int i = 0; i < 4 && gameOver != true; i++) {  // Loop ends if gameOver is set to true and i does not reach 3 
 		game_.shuffleDeck();
 		vector<Card> set(amount_keys[i]); 
 
@@ -93,7 +93,7 @@ int main()
 		HigherLowerGame(set, gameOver);
 	}
 
-	if (gameOver != true)
+	if (gameOver != true)   // If player has gotten through all 4 difficulties
 		cout << "Congratulations! You won the game!" << endl;
 
 	return 0;
